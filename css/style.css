@@ -1,0 +1,238 @@
+/* css/style.css */
+
+/* --- Base & Typography --- */
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: #f8f9fc; /* A very light grey, almost white */
+    color: #5a5c69; /* Softer black for text */
+    font-size: 0.95rem; /* Slightly smaller base font for a cleaner look */
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-weight: 500; /* Medium weight for headings */
+    color: #2c3e50; /* Darker blue-grey for headings */
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 0.75rem;
+}
+
+a {
+    color: #0d6efd; /* Bootstrap primary */
+    text-decoration: none;
+    transition: color 0.15s ease-in-out;
+}
+a:hover {
+    color: #0a58ca;
+    text-decoration: none;
+}
+
+/* --- Navbar --- */
+.navbar-brand {
+    letter-spacing: -0.5px; /* Slightly tighter letter spacing */
+}
+.navbar .nav-link {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-weight: 500; /* Medium weight for nav links */
+    color: #6c757d; /* Bootstrap secondary for nav links */
+}
+.navbar .nav-link.active,
+.navbar .nav-link:hover {
+    color: #0d6efd !important; /* Primary color for active/hover */
+}
+.navbar-toggler {
+    border: none;
+}
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+.dropdown-menu {
+    font-size: 0.9rem;
+}
+.dropdown-item:active { /* Bootstrap 5 active state for dropdown */
+    background-color: #e9ecef;
+    color: #212529;
+}
+
+/* --- Buttons --- */
+.btn {
+    font-weight: 500;
+    border-radius: 0.3rem; /* Slightly softer corners */
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    transition: all 0.2s ease-in-out;
+}
+.btn-lg {
+    padding: 0.65rem 1.25rem;
+    font-size: 1rem;
+}
+.btn-sm {
+    padding: 0.3rem 0.6rem;
+    font-size: 0.8rem;
+}
+.btn-primary {
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+}
+.btn-primary:hover {
+    background-color: #0b5ed7;
+    border-color: #0a58ca;
+}
+.btn-outline-secondary:hover {
+    background-color: #6c757d;
+    color: #fff;
+}
+.btn-outline-warning { color: #5f5d5d; background-color: #ffac3e; }
+.btn-outline-warning:hover { background-color: #ffc107; color: #000; }
+.btn-outline-danger { color: #dc3545; border-color: #dc3545; }
+.btn-outline-danger:hover { background-color: #dc3545; color: #fff; }
+
+
+/* --- Cards --- */
+.card {
+    border: 1px solid #e3e6f0; /* Softer border */
+    margin-bottom: 1.5rem; /* Default card spacing */
+}
+.card-header {
+    background-color: #f8f9fc; /* Match body background or slightly lighter */
+    border-bottom: 1px solid #e3e6f0;
+    padding: 0.75rem 1.25rem;
+    font-weight: 600; /* Bolder card headers */
+    color: #4e73df; /* Primary color for card headers */
+}
+.card-title {
+    font-weight: 500;
+}
+
+/* --- Forms --- */
+.form-label {
+    font-weight: 500;
+    margin-bottom: 0.3rem;
+    font-size: 0.875rem;
+}
+.form-control, .form-select {
+    border-radius: 0.3rem;
+    border-color: #d1d3e2; /* Softer border */
+    padding: 0.5rem 0.75rem;
+    font-size: 0.9rem;
+}
+.form-control:focus, .form-select:focus {
+    border-color: #86b7fe;
+    box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.2); /* Softer focus shadow */
+}
+.form-control-lg, .form-select-lg {
+    padding: 0.65rem 1rem;
+    font-size: 1rem;
+}
+.form-text {
+    font-size: 0.8rem;
+    color: #858796; /* Muted text for form help */
+}
+
+/* Auth Forms Specific Container */
+.form-auth-container {
+    max-width: 450px;
+    margin: 5vh auto; /* Vertical centering with some top margin */
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.075); /* Softer, more diffused shadow */
+}
+.form-auth-container h2 {
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 1.5rem;
+}
+
+/* --- Tables --- */
+.table {
+    border-color: #e3e6f0; /* Match card border */
+}
+.table th {
+    font-weight: 600; /* Bolder table headers */
+    background-color: #f8f9fc; /* Light background for headers */
+    border-bottom-width: 2px; /* Thicker bottom border for headers */
+    font-size: 0.875rem;
+    text-transform: uppercase; /* Optional: Uppercase headers */
+    letter-spacing: 0.05em;  /* Optional: Slight letter spacing */
+}
+.table td {
+    vertical-align: middle;
+}
+.table-hover tbody tr:hover {
+    background-color: #f0f2f5;
+}
+.action-links a.btn { /* Ensure buttons in action links have consistent padding */
+    margin-left: 0.25rem;
+}
+
+/* --- Alerts (Message Area) --- */
+#page-message-area .alert {
+    border-left-width: 4px;
+    padding: 0.9rem 1.25rem;
+}
+#page-message-area .alert-success { border-left-color: #198754; }
+#page-message-area .alert-danger  { border-left-color: #dc3545; }
+#page-message-area .alert-warning { border-left-color: #ffc107; }
+#page-message-area .alert-info    { border-left-color: #0dcaf0; }
+
+
+/* --- Dashboard Specific --- */
+.summary-cards .card {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.summary-cards .card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0.4rem 0.8rem rgba(0,0,0,0.12) !important;
+}
+.summary-cards .card-title {
+    font-size: 0.9rem;
+    color: #858796; /* Muted title */
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.25rem;
+}
+.summary-cards .card-text {
+    font-size: 1.75rem; /* Prominent numbers */
+}
+.summary-cards .card i.fa-3x { /* Icons in summary cards */
+    font-size: 2.25rem;
+    margin-bottom: 0.75rem;
+    opacity: 0.3;
+}
+.income-icon { color: #1cc88a; } /* Green */
+.expense-icon { color: #e74a3b; } /* Red */
+.balance-icon { color: #4e73df; } /* Blue */
+
+#financialChartContainer canvas { /* Ensure canvas respects container */
+    max-width: 100%;
+    height: auto; /* Let Chart.js manage height based on parent or options */
+}
+
+/* --- Footer --- */
+footer p {
+    color: rgba(255,255,255,0.7);
+}
+
+/* --- Utility --- */
+.text-primary { color: #4e73df !important; }
+.text-success { color: #1cc88a !important; }
+.text-info   { color: #36b9cc !important; }
+.text-warning{ color: #f6c23e !important; }
+.text-danger { color: #e74a3b !important; }
+
+.bg-gradient-primary { /* Example for a nice gradient background if needed */
+  background-color: #4e73df;
+  background-image: linear-gradient(180deg, #4e73df 10%, #224abe 100%);
+  background-size: cover;
+}
+
+/* Minimal colorless scrollbar */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: rgba(0,0,0,0.2); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(0,0,0,0.3); }
+html { scrollbar-width: thin; scrollbar-color: rgba(0,0,0,0.2) transparent; }
