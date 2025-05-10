@@ -1,3 +1,3 @@
 # trackyourexpenses
-An Expenses Tracking WebApp
+Expenses Tracking WebApp
 Hosted at: http://trackyourexpenses.wuaze.com
